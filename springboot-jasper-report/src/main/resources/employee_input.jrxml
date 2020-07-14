@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.12.2.final using JasperReports Library version 6.12.2-75c5e90a222ab406e416cbf590a5397028a52de3  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Simple_Blue" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d2df34fd-c3a8-4a8e-a447-2944e035e31b">
+	<property name="net.sf.jasperreports.export.xls.exclude.origin.band.1" value="pageHeader"/>
+	<property name="net.sf.jasperreports.export.xls.exclude.origin.band.2" value="pageFooter"/>
+	<property name="net.sf.jasperreports.export.xls.exclude.origin.band.3" value="lastPageFooter"/>
+	<property name="net.sf.jasperreports.export.xls.ignore.cell.background" value="true"/>
+	<property name="net.sf.jasperreports.export.xls.white.page.background" value="false"/>
+	<property name="net.sf.jasperreports.export.xls.ignore.graphics" value="true"/>
+	<property name="net.sf.jasperreports.export.xls.detect.cell.type=true"/>
+	<property name="net.sf.jasperreports.export.xls.remove.empty.space.between.rows=true"/>
+	<property name="net.sf.jasperreports.export.xls.remove.empty.space.between.columns=true"/>
+	<property name="net.sf.jasperreports.export.xls.ignore.page.margins=true"/>
+	<property name="net.sf.jasperreports.export.xls.one.page.per.sheet=true"/>
+	<property name="net.sf.jasperreports.export.xls.wrap.text" value="true"/>
+	<property name="net.sf.jasperreports.export.xls.column.width.ratio" value="1.10f"/>
+	<property name="net.sf.jasperreports.export.xls.auto.fit.column" value="true"/>
+	<property name="net.sf.jasperreports.export.xls.collapse.row.span" value="false"/>
+	<style name="Table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<bottomPen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="Table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<bottomPen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="Table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<bottomPen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<subDataset name="Dataset1" >
+		
+	
+		<field name="empId" class="java.lang.Integer">
+			
+		</field>
+		<field name="db" class="java.time.LocalDate">
+			
+		</field>
+		<field name="designation" class="java.lang.String">
+			
+		</field>
+		<field name="doj" class="java.time.LocalDate">
+			
+		</field>
+		<field name="empType" class="java.lang.String">
+			
+		</field>
+		<field name="firstName" class="java.lang.String">
+			
+		</field>
+		<field name="lastName" class="java.lang.String">
+			
+		</field>
+		<field name="midName" class="java.lang.String">
+			
+		</field>
+	</subDataset>
+	<parameter name="datasource" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<parameter name="Id" class="java.lang.Boolean"/>
+	<parameter name="Designation" class="java.lang.Boolean"/>
+	<parameter name="EmpType" class="java.lang.Boolean"/>
+	<parameter name="FirstName" class="java.lang.Boolean"/>
+	<parameter name="LastName" class="java.lang.Boolean"/>
+	<parameter name="Dob" class="java.lang.Boolean"/>
+	<parameter name="Doj" class="java.lang.Boolean"/>
+	
+	<title>
+		<band height="72">
+			<frame>
+				<reportElement mode="Opaque" x="-20" y="-20" width="595" height="92" backcolor="#006699" uuid="58cd6be2-d86b-4f46-8ff0-ffd2227992d7"/>
+				<staticText>
+					<reportElement x="395" y="43" width="180" height="20" forecolor="#FFFFFF" uuid="bfa181b2-e159-4088-b817-4b42c0f261e1"/>
+					<textElement textAlignment="Right">
+						<font size="14" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Employee Report]]></text>
+				</staticText>
+				<textField pattern="h:mm:ss a z">
+					<reportElement x="469" y="76" width="120" height="14" uuid="eed8ab67-9a18-46b0-b659-9ec04e0eb1c7"/>
+					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+				<textField pattern="MMMMM dd, yyyy">
+					<reportElement x="469" y="60" width="66" height="14" uuid="0a5c4784-cc38-4344-bc03-485cef3a94fc"/>
+					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</title>
+	<detail>
+		<band height="73">
+			<componentElement>
+				<reportElement x="-20" y="0" width="595" height="73" uuid="bad89899-1cd3-4200-9c03-a462878d5f72">
+					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+					<property name="com.jaspersoft.studio.table.style.table_header" value="Table_TH"/>
+					<property name="com.jaspersoft.studio.table.style.column_header" value="Table_CH"/>
+					<property name="com.jaspersoft.studio.table.style.detail" value="Table_TD"/>
+					<property name="com.jaspersoft.studio.components.autoresize.proportional" value="true"/>
+				</reportElement>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="Dataset1">
+						<dataSourceExpression><![CDATA[$P{datasource}]]></dataSourceExpression>
+					</datasetRun>
+					<jr:column width="76" uuid="9462a29f-c61d-46d7-ace5-74559ccad440">
+						<jr:columnHeader style="Table_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="76" height="30" uuid="af1018f4-3fd5-4870-8520-3a97150b4cc7">
+									<property name="net.sf.jasperreports.export.xls.auto.fit.column" value="true"/>
+								</reportElement>
+								<text><![CDATA[Employee Id]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="Table_CH" height="30"/>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="76" height="30" uuid="13276de0-cc75-4217-94e1-60e263eef60b">
+									<property name="net.sf.jasperreports.export.xls.auto.fit.column" value="true"/>
+								</reportElement>
+								<textFieldExpression><![CDATA[$F{empId}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="76" uuid="3ed479bc-3e64-4dca-91a9-23c3f6715069">
+						<jr:columnHeader style="Table_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="76" height="30" uuid="db9c79bc-8848-4c96-bf4c-e55a777a3736">
+									<property name="net.sf.jasperreports.export.xls.auto.fit.column" value="true"/>
+								</reportElement>
+								<text><![CDATA[Employee Date of Birth]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="Table_CH" height="30"/>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="76" height="30" uuid="04017fa4-8708-43ec-8f5b-c61af08266fe">
+									<property name="net.sf.jasperreports.export.xls.auto.fit.column" value="true"/>
+								</reportElement>
+								<textFieldExpression><![CDATA[$F{db}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="76" uuid="d4c4ddb3-776f-4bb3-a3fa-4158098a5273">
+						<jr:columnHeader style="Table_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="76" height="30" uuid="1ab76d2e-5639-461c-b359-f818121f3d1d">
+									<property name="net.sf.jasperreports.export.xls.auto.fit.column" value="true"/>
+								</reportElement>
+								<text><![CDATA[Employee Designation]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="Table_CH" height="30"/>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="76" height="30" uuid="e557eb5c-359a-41c0-8e9b-3a9650292193">
+									<property name="net.sf.jasperreports.export.xls.auto.fit.column" value="true"/>
+								</reportElement>
+								<textFieldExpression><![CDATA[$F{designation}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="75" uuid="ea6e8fb4-6d6f-49f3-a780-78e26fdbb090">
+						<jr:columnHeader style="Table_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="75" height="30" uuid="80d68bd2-79e8-4a1b-bdff-fefd39fb9bff">
+									<property name="net.sf.jasperreports.export.xls.auto.fit.column" value="true"/>
+								</reportElement>
+								<text><![CDATA[Employee Date of Joining]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="Table_CH" height="30"/>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="75" height="30" uuid="e6da3406-853b-413a-b02a-0e6d38a4fd96">
+									<property name="net.sf.jasperreports.export.xls.auto.fit.column" value="true"/>
+								</reportElement>
+								<textFieldExpression><![CDATA[$F{doj}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="73" uuid="1fa6e280-282c-4c50-8061-b32338c00ba4">
+						<jr:columnHeader style="Table_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="73" height="30" uuid="b6e2a680-e05c-4324-bef9-b77488401a5b">
+									<property name="net.sf.jasperreports.export.xls.auto.fit.column" value="true"/>
+								</reportElement>
+								<text><![CDATA[Employee Type]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="Table_CH" height="30"/>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="73" height="30" uuid="c98f9eb0-d373-46af-a60b-23e75025c648">
+									<property name="net.sf.jasperreports.export.xls.auto.fit.column" value="true"/>
+								</reportElement>
+								<textFieldExpression><![CDATA[$F{empType}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="73" uuid="ce179e1c-00f7-40f4-97c8-b2121ed5058e">
+						<jr:columnHeader style="Table_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="73" height="30" uuid="33e67f87-b5d7-4feb-a481-a2d65f1e8d0e">
+									<property name="net.sf.jasperreports.export.xls.auto.fit.column" value="true"/>
+								</reportElement>
+								<text><![CDATA[Employee FirstName]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="Table_CH" height="30"/>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="73" height="30" uuid="f0a46f1f-e977-45da-a032-c931f654c786">
+									<property name="net.sf.jasperreports.export.xls.auto.fit.column" value="true"/>
+								</reportElement>
+								<textFieldExpression><![CDATA[$F{firstName}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="73" uuid="e5d3eac2-0992-4899-9805-afc6f0d8baab">
+						<jr:columnHeader style="Table_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="73" height="30" uuid="44ae3bfa-1d16-451e-b919-3d1bdbcd1d3a">
+									<property name="net.sf.jasperreports.export.xls.auto.fit.column" value="true"/>
+								</reportElement>
+								<text><![CDATA[Employee Lastname]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="Table_CH" height="30"/>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="73" height="30" uuid="ed55291a-7c36-4e49-8521-7125e594d5dd">
+									<property name="net.sf.jasperreports.export.xls.auto.fit.column" value="true"/>
+								</reportElement>
+								<textFieldExpression><![CDATA[$F{lastName}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="73" uuid="1e88ce4e-9bd0-4f09-8234-287c12b80b7a">
+						<jr:columnHeader style="Table_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="73" height="30" uuid="27102d28-09be-4077-a9c0-0422eba25d1b">
+									<property name="net.sf.jasperreports.export.xls.auto.fit.column" value="true"/>
+								</reportElement>
+								<text><![CDATA[Employee Midname]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="Table_CH" height="30"/>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="73" height="30" uuid="418de627-9624-46ad-8993-62dc6047e0dd">
+									<property name="net.sf.jasperreports.export.xls.auto.fit.column" value="true"/>
+								</reportElement>
+								<textFieldExpression><![CDATA[$F{midName}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+	</detail>
+</jasperReport>
